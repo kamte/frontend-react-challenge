@@ -1,0 +1,27 @@
+{
+  "name": "frontend-react-challenge",
+  "description": "Frontend code challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "code",
+    "challenge"
+  ],
+  "author": "Miguel Collado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "promisify-supertest": "^1.0.0",
+    "supertest": "^3.4.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
