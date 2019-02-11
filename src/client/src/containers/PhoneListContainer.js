@@ -15,7 +15,7 @@ const mapStateToProps = state => ({
 
 const enhance = compose(
   connect(mapStateToProps),
-  (List) => branch(({ phones }) => !Boolean(phones.length), Spinner, List),
+  (List) => branch(({ phones }) => !Boolean(phones.length), addTitle('Loading...', Spinner), List),
 );
 
 export default enhance(PhoneList);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './PhoneDetail.css';
+import backArrow from './Back_Arrow.svg';
 
 class PhoneDetail extends Component {
   constructor(props) {
@@ -13,10 +15,15 @@ class PhoneDetail extends Component {
     const {img, title, price, description} = this.props;
     return (
       <div className="PhoneDetail">
-        <img src={img} className="PhoneDetail__logo" alt={title}/>
-        <h2>{title}</h2>
-        <span>{price}€</span>
-        <p>{description}</p>
+        <Link to="/">
+          <img className="PhoneDetail__back" src={backArrow} alt="go back"/>
+        </Link>
+        <div>
+          <img src={img} className="PhoneDetail__logo" alt={title}/>
+          <h2>{title}</h2>
+          <span><b>Price:</b> {price}€</span>
+          <p><b>Description:</b> {description}</p>
+        </div>
       </div>
     );
   }
