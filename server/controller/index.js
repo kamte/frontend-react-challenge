@@ -5,7 +5,7 @@ const getAllPhones = (req, res) => {
 	const {page, itemsPerPage} = req.query;
 	
   return res.status(200).json(
-		paginate(phones, itemsPerPage, page),
+		paginate(phones, parseInt(itemsPerPage, 10), parseInt(page), 10),
 	);
 };
 

@@ -6,7 +6,7 @@ import '../components/Pagination.css';
 const mapStateToProps = state => ({
   totalItemsCount: state.pagination.count,
   itemsCountPerPage: state.pagination.itemCountPerPage,
-  activePage: parseInt(state.pagination.pageNumber, 10),
+  activePage: state.pagination.pageNumber,
 });
 
 const mapDispatchToProps = dispatch => ({

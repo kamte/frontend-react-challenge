@@ -14,7 +14,6 @@ const paginate = (data, itemsPerPage, page) => {
   const start = _calculateStart(itemsPerPage, page);
   const end = start + itemsPerPage;
   const items = data.slice(start, end);
-
   return {
       phones      : items,
       paginator : {
