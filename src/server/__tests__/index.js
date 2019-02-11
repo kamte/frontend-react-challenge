@@ -16,7 +16,6 @@ describe('Server', () => {
     const response = await api
       .get(`${BASE_URL}/0`)
       .expect(200);
-
   
     expect(response.body.phone.id).toBe(0);
   });

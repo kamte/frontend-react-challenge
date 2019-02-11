@@ -1,10 +1,12 @@
 const phones = require('../model');
+const {paginate} = require('./pagination');
 
 const getAllPhones = (req, res) => {
-  return res.status(200).json({
-        phones,
-        message: "All the phones",
-  });
+	const {page, itemsPerPage} = req.query;
+	
+  return res.status(200).json(
+		paginate(phones, itemsPerPage, page),
+	);
 };
 
 const getSinglePhone = (req, res) => {
@@ -19,6 +21,7 @@ const getSinglePhone = (req, res) => {
          message: "Phone record not found",
    });
 };
+
 
 module.exports = {
   getAllPhones,

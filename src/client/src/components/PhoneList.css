@@ -1,0 +1,5 @@
+.PhoneList {
+  padding: 4vh 2vw;
+  display: flex;
+  flex-wrap: wrap;
+}

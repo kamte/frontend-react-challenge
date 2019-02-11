@@ -1,34 +1,17 @@
+const {commerce, image, lorem} = require('faker');
 
-let __id__ = 0;
-const generateId = () => {
-	return __id__++;
+const times = (n, f) => {
+	return Array.from({length: n}).map((_, i) => f(i));
 } 
 
-const mockData = [
-	{
-		id: generateId(),
-		title: 'iPhone Xs',
-		description: 'Largest Super Retina display. Fastest performance with A12 Bionic. Most secure facial authentication with Face ID. ',
-		img: '',
-		color: 'Space grey',
-		price: '889',
-	},
-	{
-		id: generateId(),
-		title: 'iPhone Xr',
-		description: 'All-screen design. Longest battery life ever in an iPhone.',
-		img: '',
-		color: 'Pearl white',
-		price: '589',
-	},
-	{
-		id: generateId(),
-		title: 'Samsung Galaxy S9',
-		description: 'The revolutionary camera that adapts like the human eye.',
-		img: '',
-		color: 'Coral Blue',
-		price: '519,99',
-	},
-];
+const createPhone = (id) => ({
+	id,
+	title: commerce.productName(),
+	description: lorem.paragraph(),
+	img: image.imageUrl(640, 480, 'technics', true),
+	color: commerce.color(),
+	price: commerce.price(),
+});
 
-module.exports = mockData;
+module.exports = times(20, createPhone);
+
