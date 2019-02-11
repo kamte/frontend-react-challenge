@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PhoneDetail from '../components/PhoneDetail';
+import PhoneDetail from '../components/PhoneDetail/';
 import { fetchSinglePhone } from '../actions';
 
 const mapStateToProps = state => ({...state.phoneDetail});

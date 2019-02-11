@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import PhoneDetailContainer from '../containers/PhoneDetailContainer';
-import PhoneListContainer from '../containers/PhoneListContainer';
+import PhoneDetailContainer from '../../containers/PhoneDetailContainer';
+import PhoneListContainer from '../../containers/PhoneListContainer';
 
 const Root = ({ store }) => (
   <Provider store={store}>

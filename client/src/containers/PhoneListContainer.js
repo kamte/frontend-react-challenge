@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import {compose} from 'ramda';
 import Spinner from '../components/Spinner';
-import PhoneItem from '../components/PhoneItem';
-import '../components/PhoneList.css';
+import PhoneItem from '../components/PhoneItem/';
+import '../components/PhoneList/PhoneList.css';
 import branch from '../hocs/branch';
 import toList from '../hocs/toList';
 import addTitle from '../hocs/addTitle';

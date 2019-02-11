@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import store from './store'
 import {fetchPhonesPage} from './actions';
 import './index.css';
-import Root from './components/Root';
+import Root from './components/Root/';
 
 store.dispatch(fetchPhonesPage(1, true));
 

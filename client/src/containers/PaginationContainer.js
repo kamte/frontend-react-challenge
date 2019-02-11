@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Pagination from 'react-js-pagination';
 import {fetchPhonesPage} from '../actions';
-import '../components/Pagination.css';
+import '../components/Pagination/Pagination.css';
 
 const mapStateToProps = state => ({
   totalItemsCount: state.pagination.count,
