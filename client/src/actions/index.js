@@ -7,12 +7,14 @@ export const fetchPhones = (data) => {
   return {
     type: FETCH_PHONES,
     payload: data.phones,
+    pagination: data.paginator,
   }
 };
 
-export const fetchAllPhones = (page = 1) => {
+export const fetchPhonesPage = (page = 1, initial = false) => {
   return (dispatch) => {
     const url = `${API_URL}?page=${page}&itemsPerPage=8`;
+    const delay = initial ? 2000 : 0;
     console.log(url);
     setTimeout(() => {
       return axios.get(url)
@@ -22,7 +24,7 @@ export const fetchAllPhones = (page = 1) => {
         .catch(error => {
           throw(error);
         });
-    }, 2000);
+    }, delay);
   };
 };
 

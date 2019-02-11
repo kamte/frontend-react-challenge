@@ -10,6 +10,7 @@ function rootReducer(state = initialState, action) {
     case FETCH_PHONES:
       return Object.assign({}, state, {
         phones: action.payload,
+        pagination: action.pagination,
       });
 
     case FETCH_PHONE:

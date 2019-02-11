@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import store from './store'
-import {fetchAllPhones} from './actions';
+import {fetchPhonesPage} from './actions';
 import './index.css';
 import Root from './components/Root';
 
-
-
-store.dispatch(fetchAllPhones());
+store.dispatch(fetchPhonesPage(1, true));
 
 ReactDOM.render(
   <Root store={store}/>, 
