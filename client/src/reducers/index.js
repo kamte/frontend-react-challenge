@@ -3,6 +3,7 @@ import {FETCH_PHONES, FETCH_PHONE} from '../actions/types';
 const initialState = {
   phones: [],
   phoneDetail: {},
+  pagination: {},
 };
 
 function rootReducer(state = initialState, action) {
